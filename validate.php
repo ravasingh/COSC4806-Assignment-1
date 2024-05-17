@@ -1,32 +1,26 @@
 <?php
 session_start();
-$code_username = "ravan";
-$code_password = "123";
+$correct_username = "ravan";
+$correct_password = "123";
 
-$username = $_REQUEST["username"];
-$password = $_REQUEST["password"];
+$code_username = $_REQUEST["username"];
+$code_password = $_REQUEST["password"];
 
-if($code_username == $username && $code_password == $password)
+if($code_username == $correct_username && $code_password == $correct_password)
   {
     $_SESSION['authenticated'] = true;
-    $_SESSION['username'] = $username;
+    $_SESSION["username"] = $code_username;
     header("Location: index.php");
     exit;
-  echo "successfully logged in!";
   }
 else
 {
-  if (isset($_SESSION['login_attempts'])) 
-  {
-      $_SESSION['login_attempts']++;
-  } 
-  else 
-  {
-      $_SESSION['login_attempts'] = 1;
-  }
-  header("Location: login.php");
-  exit;
-  echo "failed to login. Invalid username or password";
-}
+      if (!isset($_SESSION['login_attempts'])) {
+          $_SESSION['login_attempts'] = 1;
+      } else {
+          $_SESSION['login_attempts'] += 1;
+      }
 
-?>
+      echo "This is unsuccessful attempt number " . $_SESSION['login_attempts'];
+  }
+  ?>
