@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ravanpreet Singh</title>
+        <title>Login</title>
     </head>
     <body>
-        <h1>Assignment.1</h1>
+        <h1>Login</h1>
+        <form action="process_login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+        </form>
 
     </body>
 </html>
