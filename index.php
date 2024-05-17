@@ -5,7 +5,8 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form action="process_login.php" method="post">
+      
+        <form action="/validate.php" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <br><br>
