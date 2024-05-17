@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Ravanpreet Singh</title>
     </head>
     <body>
-        <h1>Login</h1>
-      
-        <form action="/validate.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br><br>
-          <input type="submit" value="Login">
-          
-        </form>
+        <h1>Assignment.1</h1>
 
     </body>
 </html>
